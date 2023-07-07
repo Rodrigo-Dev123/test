@@ -16,8 +16,8 @@ const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
-app.use(helmet());
-app.use(express.urlencoded({extended: true}));
+// app.use(helmet());
+app.use(express.urlencoded({extended: true})); // Isto serve para que o req.body esteja disponível no express e que possa ser usado por ele.
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
@@ -42,7 +42,7 @@ app.use(csrf());
 app.use(middlewareGlobal);
 app.use(checkCsrfError);
 app.use(csrfMiddleware);
-app.use(routes);
+app.use(routes); // Serve para dizer ao express para usar as rotas do arquivo routes.js.
 
 app.on('pronto', () => {  // captura este sinal que foi emitido por app e começa escultar na porta 3000.
     app.listen(3000, () => {
