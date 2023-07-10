@@ -1,0 +1,23 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@media screen and (min-width: 300px){
+	.font-flex {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 278px){
+	.font-flex {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 435px){
+	.font-flex {
+        font-size: 30px;
+    }
+}
+
