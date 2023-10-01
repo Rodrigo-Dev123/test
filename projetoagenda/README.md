@@ -1,4 +1,4 @@
-# Project schedule
+# Agenda Project
 
 ## Content
 
@@ -12,9 +12,14 @@
 
 ## Setup
 - Development setup:
+    
+    - create `.env` file in root dir: 
+        ```text
+            CONNECTIONSTRING=mongodb+srv://rodrigojsg9:Admin-12345@cluster0.2yiaklz.mongodb.net/?retryWrites=true&w=majority
+        ```
 
-    - in root dir:
-
+    **in root dir:**
+    
     - run `npm install`
 
     - right away: `npm start`
